@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Case Study of proj_name</title>
+    <meta name="description" content="Case study page of proj_name" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/giacomo-cerino.png"
+              alt="Giacomo Cerino Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Giacomo Cerino</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link"> About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link"> Projects </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Vision System Feasibility Study</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            A comprehensive feasibility study for integrating a vision system into a WAAM (Wire Arc Additive Manufacturing) 
+            industrial 5-axis machine. The research explored computer vision techniques to monitor and validate 
+            additive manufacturing processes in real-time.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/jpeg/laptop-feasibility-study.jpeg"
+              alt="Vision System Feasibility Study Results"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                During my internship at AIT (Austrian Institute of Technology) in Vienna, I conducted an in-depth feasibility study 
+                for integrating a vision system into WAAM (Wire Arc Additive Manufacturing) industrial machines. 
+                WAAM is an advanced manufacturing technique that uses a welding arc to deposit metal wire layer-by-layer, 
+                creating large, complex metal parts with minimal material waste.
+              </p>
+              <p class="project-details__desc-para">
+                The challenge was to determine whether real-time computer vision could effectively monitor and validate 
+                the quality of the additive manufacturing process. The study required analyzing camera capabilities, 
+                image processing algorithms, machine integration points, and the feasibility of real-time quality control 
+                on a 5-axis industrial machine. And for the biggest part, path following algorithms with several constraints 
+                were simulated and evaluated.
+              </p>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Research Scope</h3>
+              <p class="project-details__desc-para">
+                The feasibility study encompassed several key areas:
+              </p>
+              <ul class="project-details__desc-para" style="list-style-type: disc; margin-left: 2rem;">
+                <li><strong>Path Following:</strong> Development of algorithms for camera path following from a fixed distance behind the torch</li>
+                <li><strong>Torch Simulation:</strong> Simulation of the torch movements and their impact on the camera path</li>
+                <li><strong>Image Acquisition:</strong> Analysis of camera placement, lighting conditions, and image quality requirements for WAAM monitoring</li>
+                <li><strong>G-code Analysis:</strong> Investigation of machine commands to correlate vision data with machine states and positions</li>
+                <li><strong>Quality Metrics:</strong> Definition and measurement of visual quality indicators for additive manufacturing processes</li>
+                <li><strong>3D Modeling Considerations:</strong> Analysis of how vision data could inform or validate CAD/CAM models used in manufacturing</li>
+              </ul>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Methodology</h3>
+              <p class="project-details__desc-para">
+                <strong>1. Literature Review & Baseline Research</strong><br/>
+                I conducted comprehensive research on existing vision systems in additive manufacturing, 
+                analyzing published studies on WAAM quality control and computer vision applications in industrial settings.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>2. Camera Degrees of Freedom</strong><br/>
+                I evaluated different camera positions and orientations relative to the welding torch. I opted for a configuration 
+                where the camera is mounted on a robotic arm trailing the torch at a fixed distance and with the capability to rotate
+                the camera on itself, allowing optimal perpendicular orientation.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>3. G-code and Machine Command Analysis</strong><br/>
+                I studied the machine's G-code output and control system to understand how to follow the coordinates to 
+                keep the camera in the right place to follow the torch movements at a fixed distance.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>4. 3D Model Integration Study</strong><br/>
+                Using Rhinoceros3D, I explored how 2D vision data could be processed to reconstruct 3D part geometry 
+                and validate against original CAD models.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>5. Performance & Feasibility Assessment</strong><br/>
+                I benchmarked computational requirements, identified bottlenecks, and evaluated whether real-time processing 
+                was feasible on industrial hardware. The assessment included cost-benefit analysis and implementation roadmap recommendations.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>6. Documentation & Recommendations</strong><br/>
+                I compiled findings into a comprehensive feasibility report with technical details, test results, 
+                recommendations, and a proposed implementation path for future development.
+              </p>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Key Technical Challenges Investigated</h3>
+              <p class="project-details__desc-para">
+                <strong>Arc Light Interference:</strong> WAAM processes generate intense arc light that can overwhelm camera sensors 
+                and wash out images. For this reason, a Cavitar camera was selected. 
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Path following noise:</strong> The camera path computed was noisy and required filtering to ensure stable tracking of the welding torch,
+                along with smoothing and awareness of sudden direction changes or of jumps.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Geometric Complexity:</strong> WAAM produces 3D parts with complex geometries. 
+                The more intricate the geometry, the more challenging it is to accurately track the welding torch 
+                and keep the seam in the center of the FOV of the camera. So I developed a scoring system to evaluate tracking performance based on these factors.
+              </p>
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools & Technologies Used</h3>
+              <div class="skills">
+                <div class="skills__skill">OpenCV</div>
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">Image Processing</div>
+                <div class="skills__skill">Computer Vision</div>
+                <div class="skills__skill">G-code Analysis</div>
+                <div class="skills__skill">Rhinoceros3D</div>
+                <div class="skills__skill">Data Analysis</div>
+                <div class="skills__skill">Research Methodology</div>
+              </div>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Key Findings</h3>
+              <p class="project-details__desc-para">
+                <strong>Feasibility Assessment:</strong> The study concluded that vision system integration is 
+                technically challenging both for the addition of two degrees of freedom to move the camera, 
+                and for how hard it is to keep the seam at the center of the FOV for complex geometries.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Improving Factors:</strong> To ensure a good quality of the live inspection, 
+                some changes were suggested for the camera setup, starting from an auxiliary arm to improve positioning flexibility.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Implementation Path:</strong> A phased approach was recommended, starting with offline image analysis before progressing 
+                to real-time monitoring, with careful validation at each stage.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Economic Viability:</strong> While initial implementation costs were significant, and the potential for improved quality control 
+                and reduced scrap rates justified investment in vision system technology for high-value WAAM applications, 
+                it was determined that further optimizations in the design of the system were needed to make real-time processing 
+                feasible on industrial hardware.
+              </p>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Research Outcomes</h3>
+              <p class="project-details__desc-para">
+                The feasibility study produced:
+              </p>
+              <ul class="project-details__desc-para" style="list-style-type: disc; margin-left: 2rem;">
+                <li>Comprehensive technical report with detailed findings and recommendations</li>
+                <li>Proof-of-concept image processing algorithms for seam detection and analysis</li>
+                <li>Performance benchmarks for real-time processing requirements</li>
+                <li>Cost-benefit analysis and implementation roadmap</li>
+                <li>Documentation of technical challenges and proposed solutions</li>
+              </ul>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Impact & Learning</h3>
+              <p class="project-details__desc-para">
+                This project deepened my understanding of computer vision applications in industrial manufacturing. 
+                It reinforced the importance of systematic research methodologies, the challenges of real-world computer vision deployment, 
+                and the need for creative problem-solving when integrating new technologies into established industrial processes.
+              </p>
+              <p class="project-details__desc-para">
+                Working at AIT gave practical insight into how hardware and software work together and the challenges of deploying new technologies in industry.
+              </p>
+            </div>
+
+            <!-- Live Links
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Study Results</h3>
+              <a
+                href="#"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Research Document</a
+              >
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </section>    
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/giacomo-cerino/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/LobinArcolungo">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://makerworld.com/en/@whale_levitator/upload">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/makerworld-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Giacomo Cerino</h4>
+            <p class="main-footer__short-desc">
+              A creative technologist with a passion for DIY projects exploring new technologies and mixing them with custom made hardware and software solutions.
+
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2021. This Portfolio has been made possible by the beautiful work of
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

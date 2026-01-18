@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Case Study of proj_name</title>
+    <meta name="description" content="Case study page of proj_name" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/giacomo-cerino.png"
+              alt="Giacomo Cerino Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Giacomo Cerino</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link"> About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link"> Projects </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+        <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Distance and Speed Sensor System</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            A comprehensive sensor system designed for ERLEtek's robotic test platform. 
+            This project involved designing custom hardware, integrating multiple sensors, 
+            and developing the application layer to both measure distance and speed accurately, 
+            display the values and make them retrievable via a user-friendly interface.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/png/3D-design-crown.png"
+              alt="Sensor System Assembly"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                ERLEtek, a robotics startup, required a specialized sensor system for their robotic test platform. 
+                The challenge was to create an integrated solution that could accurately measure both distance and speed 
+                in real-time while being reliable and maintainable. I took ownership of the entire project lifecycle: 
+                from initial hardware design and component selection, through physical assembly and soldering, 
+                to firmware development and final application integration.
+              </p>
+              <p class="project-details__desc-para">
+                The system needed to have a reliable communication between different microcontrollers placed in different parts of the testbench.
+                The <strong>Arduino Nano</strong> boards, all acting in parallel, had to collect data from the sensors, process it, 
+                and send it to the main control unit, a <strong>Raspberry Pi 5</strong> via serial communication. 
+                The system had to provide accurate measurements with minimal latency, and be easily reconfigurable for different test scenarios. 
+                This required careful consideration of sensor specifications, microcontroller capabilities, and communication standards.
+              </p>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Key Components</h3>
+              <p class="project-details__desc-para">
+                The sensor system was built around several critical components:
+              </p>
+              <ul class="project-details__desc-para" style="list-style-type: disc; margin-left: 2rem;">
+                <li><strong>Microcontroller:</strong> Arduino-based platform for sensor data acquisition and processing</li>
+                <li><strong>Distance Sensors:</strong> TOF sensors for precise distance measurement</li>
+                <li><strong>Speed Sensors:</strong> Encoder-based sensors for rotational speed measurement</li>
+                <li><strong>Communication Module:</strong> I2C interface for integration between sensors and Nano boards, and serial communication between the Nanos and the main control system</li>
+                <li><strong>Power Management:</strong> Power supply was designed to be controlled by the Raspberry Pi 5</li>
+                <li><strong>Protective Housing:</strong> 3D-printed enclosure designed on <strong>OnShape</strong> with precise cutouts for sensors and integration points</li>
+              </ul>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Development Process</h3>
+              <p class="project-details__desc-para">
+                <strong>1. Requirements Analysis & Design</strong><br/>
+                I started by understanding the specific requirements of the robotic platform and sketching the electrical design. 
+                The sensors chosen were already well-integrated internally thanks to the previous work of the team. 
+                This allowed me to focus on optimizing the overall system architecture.
+              </p>
+              <div class="project-details__showcase-img-cont">
+                <img
+                  src="./assets/proj-1-assets/testbench-connections.png"
+                  alt="Sensor System Design"
+                  class="project-details__showcase-img"
+                />
+                <p class="project-details__desc-para">
+                  The Tof sensors VL6180X (short range) and VL53L0x (long range) are connected via I2C to the Arduino Nano. 
+                  On the other side, another arduino Nano is connected with a rotary encoder that measures the printing. 
+                  Both these boards process the data and send it to the Raspberry Pi 5 via serial communication.
+                  In the RPI, a Python script runs to receive the data and perform high-level processing. 
+                  Sending the filtered data to a LCD display for real-time monitoring and saving it for later analysis.
+
+                </p>
+              </div>
+
+              <p class="project-details__desc-para">
+                <strong>2. Hardware Design</strong><br/>
+                Using OnShape, I designed a custom sensor housing for both the TOF sensors and the speed encoder that would securely mount all components.
+                while allowing for easy maintenance and calibration. The design ensured optimal sensor placement for accurate readings. 
+                A complete assembly can be seen in the image at the top and it's composed by three main parts plus the RPI enclosure:
+                <ul class="project-details__desc-para" style="list-style-type: disc; margin-left: 2rem;">
+                  <li><strong>The Gearbox:</strong> A gear overdrive to multiply (1:4) the speed of the wheel measured by the rotary encoder that would otherwise be too slow for accurate measurement.</li>
+                  <li><strong>The Crown:</strong> Custom "crown" to hold the TOF sensors around the printing Head at precise angles and distances.</li>
+                  <li><strong>The Display Cover:</strong> A simple case to protect the LCD display and provide a user-friendly interface.</li>
+                </ul>
+                <div class="project-details__showcase-img-cont">
+                  <img
+                    src="./assets/proj-1-assets/crown.png"
+                    alt="Crown Printed and mounted"
+                    class="project-details__showcase-img"
+                  />
+                  <p class="project-details__desc-para">
+                    The Crown design is composed of several pieces that fit together and precisely fit the TOF sensors. 
+                    The design allows fast prototyping, and precise sitting around the printing head.
+                  </p>
+                </div>
+              </p>
+              
+              <p class="project-details__desc-para">
+                <strong>3. Assembly & Soldering</strong><br/>
+                I carefully assembled all components, performing precision soldering work to ensure reliable electrical connections. 
+                Each solder joint was tested to guarantee no cold joints or poor connections that could cause measurement errors.
+                <img
+                    src="./assets/proj-1-assets/soldering.png"
+                    alt="Crown Soldering"
+                    class="project-details__showcase-img"
+                  />
+              </p>
+
+              <p class="project-details__desc-para">
+                <strong>4. Firmware Development</strong><br/>
+                Using C++, I developed the firmware to handle sensor data acquisition, apply calibration corrections, 
+                and prepare data for transmission. The code included error handling and sensor validation routines.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>5. Communication Protocol Implementation</strong><br/>
+                I implemented the I2C communication protocol to assign specific addresses to each sensor and communicate with the Nanos.
+                Then I configured the Nanos to dialogue with the Raspberry Pi and to start/stop sending readings and communicating issues.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>6. Software Development</strong><br/>
+                As the Raspberry Pi was the central hub mounting an <strong>Ubuntu 24</strong> Desktop environment, 
+                I developed a system service to listen for the press of a button, and a Python application to manage 
+                sensor data collection, processing, and visualization.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>6. Application Level Implementation</strong><br/>
+                Then, the Raspberry Pi was configured to accept a remote desktop connection, allowing for data retrieval and visualizations
+                in a user-friendly way.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>7. Testing & Calibration</strong><br/>
+                Extensive testing was performed to validate measurement accuracy across the entire operating range. 
+                I created calibration procedures in Python to adjust sensor parameters for optimal performance.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>8. Integration & Deployment</strong><br/>
+                Finally, the system was integrated into the Testbench system, 
+                ensuring smooth communication and reliable operation under real-world conditions.
+                <img
+                    src="./assets/proj-1-assets/display.png"
+                    alt="Display with measurements"
+                    class="project-details__showcase-img"
+                  />
+              </p>
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools & Technologies Used</h3>
+              <div class="skills">
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">C++</div>
+                <div class="skills__skill">3D Modeling</div>
+                <div class="skills__skill">I2C Protocols</div>
+                <div class="skills__skill">Arduino</div>
+                <div class="skills__skill">Raspberry Pi</div>
+                <div class="skills__skill">Soldering</div>
+              </div>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Challenges & Solutions</h3>
+              <p class="project-details__desc-para">
+                <strong>Challenge: Speed measurement inaccuracy</strong><br/>
+                The encoder accuracy of 12 ticks per rotation was high, but still too low for an average rotational speed of one turn every 20 seconds.
+                I implemented a gear overdrive to gather more ticks per rotation, effectively increasing the resolution of the speed measurements.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Challenge: Heavy workload</strong><br/>
+                Initial designs demanded too much computational power., mainly because a single Nano board was supposed to carry all the workload.
+                Plus, the encoder, working with interrupts, was interfering with the TOF sensor measurements.
+                I properly divided the tasks across multiple boards increasing the modularity and reducing power issues.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Challenge: I2C Communication Reliability</strong><br/>
+                At high data rates, and long distances (more than 5 meters), the I2C connection was unreliable. 
+                I rethought the cable management and moved the length of the cables from the I2C bus to the serial communication line.
+                I also implemented a reconnection mechanism to ensure robust communication and point of failure identification.
+              </p>
+            </div>
+
+            <!-- Uncomment when you have live links
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="#"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Live Link</a
+              >
+              <a
+                href="#"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/giacomo-cerino/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/LobinArcolungo">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://makerworld.com/en/@whale_levitator/upload">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/makerworld-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Giacomo Cerino</h4>
+            <p class="main-footer__short-desc">
+              A creative technologist with a passion for DIY projects exploring new technologies and mixing them with custom made hardware and software solutions.
+
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2021. This Portfolio has been made possible by the beautiful work of
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

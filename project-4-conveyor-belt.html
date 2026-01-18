@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Case Study of proj_name</title>
+    <meta name="description" content="Case study page of proj_name" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/giacomo-cerino.png"
+              alt="Giacomo Cerino Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Giacomo Cerino</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link"> About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link"> Projects </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+        <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Conveyor Belt Automation System</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            A self-contained automated system designed to remotely control a conveyor belt carrying mixed concrete inside ERLEtek's concrete printing robot. The system integrates custom control electronics, firmware, and software for seamless operation from a laptop or the robot itself.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/png/conveyor-belt.png"
+              alt="Conveyor Belt Automation System"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                ERLEtek, a robotics startup specializing in concrete 3D printing, required an automated conveyor belt system 
+                to transport mixed concrete into their large-scale printing robot. The challenge was to create a self-contained, 
+                remotely controllable system that could be operated either independently from a laptop or integrated with the main robotic platform.
+                The system needed moreover, to be reliable under demanding conditions (construction site environment).
+              </p>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">System Architecture</h3>
+              <p class="project-details__desc-para">
+                Rather than directly interfacing with the motor, I worked with the control box's internal infrastructure. 
+                The system leverages the existing voltage regulator wiring and speed control mechanism (potentiometer) already installed in the conveyor belt system. 
+                This approach minimized modifications to the original equipment while adding remote control capabilities.
+              </p>
+              <p class="project-details__desc-para">
+                The architecture consists of:
+              </p>
+              <ul class="project-details__desc-para" style="list-style-type: disc; margin-left: 2rem;">
+                <li><strong>Control Electronics:</strong> ESP32 microcontroller as the primary control unit with WiFi connectivity</li>
+                <li><strong>Relay Modules:</strong> Used for safe switching and control of the conveyor belt operation</li>
+                <li><strong>ATmega Controller:</strong> Secondary microcontroller for relay management and local control logic</li>
+                <li><strong>Auxiliary Power Supply:</strong> 12V 5A dedicated power supply ensuring the system is completely self-contained</li>
+                <li><strong>Communication Layer:</strong> TCP server running on ESP32 for remote laptop control and Serial for robot integration</li>
+                <li><strong>Existing Infrastructure:</strong> Integration with the control box's voltage regulator and potentiometer for speed management</li>
+              </ul>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Development Process</h3>
+              <p class="project-details__desc-para">
+                <strong>1. Requirements Analysis</strong><br/>
+                I analyzed ERLEtek's operational requirements, including concrete transfer rates, remote control needs, 
+                and the existing control infrastructure to minimize invasive modifications.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>2. Hardware Design & Integration Strategy</strong><br/>
+                I studied the control box's internal wiring and voltage regulator to understand how to safely integrate relay modules 
+                and external control electronics. The key insight was leveraging the existing voltage regulator and potentiometer-based speed control 
+                rather than replacing them entirely.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>3. Power Supply Configuration</strong><br/>
+                Selected and configured a 12V 5A auxiliary power supply to create a self-contained system. 
+                This required careful wiring and grounding to properly ensure all components received stable voltage without interference.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>4. Relay Module Integration</strong><br/>
+                Integrated relay modules to safely control the conveyor belt operation from the ATmega controller.
+                The relays act as an interface layer between the control electronics and the high-power motor circuit.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>5. Firmware Development</strong><br/>
+                Developed firmware for both the ESP32 and ATmega to handle WiFi communication, TCP server operations, 
+                relay switching logic, and local control signals. The ESP32 receives commands from the TCP server, then communicates
+                with ATmega through serial commands whether to switch on, off, forward or backward.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>7. Python Control Software</strong><br/>
+                Created a Python application for laptop-based remote control, providing a user-friendly interface 
+                for operating the conveyor belt independently or as part of the robotic system workflow.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>8. Testing & Optimization</strong><br/>
+                Testing the system on the field proved relay control reliability, communication robustness, 
+                power supply stability, and system durability under concrete transport conditions.
+              </p>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Control Modes</h3>
+              <p class="project-details__desc-para">
+                <strong>Standalone Mode:</strong> The conveyor belt can be controlled remotely from a laptop using the custom Python application 
+                via WiFi/TCP communication. The existing potentiometer continues to manage speed, while relay commands control on/off operations.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Robot-Integrated Mode:</strong> The conveyor belt can be seamlessly integrated into the main robotic system via Serial communication, 
+                allowing the robot's control system to command the conveyor belt as part of the automated concrete printing workflow. All was needed was to 
+                create a Ros2 publisher node inside the robot's main control software to send serial commands to the ESP32.
+              </p>
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools & Technologies Used</h3>
+              <div class="skills">
+                <div class="skills__skill">ESP32</div>
+                <div class="skills__skill">ATmega</div>
+                <div class="skills__skill">Arduino</div>
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">TCP Communication</div>
+                <div class="skills__skill">Relay Control</div>
+                <div class="skills__skill">Electronics Integration</div>
+                <div class="skills__skill">Embedded Systems</div>
+                <div class="skills__skill">Prototyping</div>
+              </div>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Key Features</h3>
+              <ul class="project-details__desc-para" style="list-style-type: disc; margin-left: 2rem;">
+                <li><strong>Dual Control Interface:</strong> Both remote laptop control and robot-integrated operation</li>
+                <li><strong>Speed Regulation:</strong> Controlled via the existing potentiometer mechanism, ensuring compatibility with original equipment</li>
+                <li><strong>Self-Contained System:</strong> Auxiliary 12V 5A power supply provides complete independence from external power sources</li>
+                <li><strong>Reliable Relay Control:</strong> Safe switching via relay modules ensuring equipment longevity</li>
+                <li><strong>TCP/IP Communication:</strong> Robust network communication for remote operation from any laptop on the network</li>
+                <li><strong>Non-Invasive Integration:</strong> Works with existing control box infrastructure without requiring major modifications</li>
+              </ul>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Challenges & Solutions</h3>
+              <p class="project-details__desc-para">
+                <strong>Challenge: Establishing Reliable Signal From Laptop to Conveyor Belt</strong><br/>
+                The main challenge was creating a reliable communication path from a remote laptop to the conveyor belt system 
+                over potentially unstable network conditions. I solved this by implementing a TCP server on the ESP32 microcontroller. 
+                This server accepts commands from the laptop and translates them into relay control signals for the ATmega controller. 
+                The architecture provides stable, deterministic control while maintaining flexibility for future enhancements.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Challenge: Creating a Self-Contained System With Auxiliary Power</strong><br/>
+                The system needed to operate independently without being part of the power system of the main robot. 
+                I integrated a 12V 5A auxiliary power supply to power all control electronics, relay modules, and communication interfaces. 
+                The result is a completely autonomous system that can be deployed anywhere within network range.
+              </p>
+            </div>
+
+            <!-- Live Links
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="#"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Live Link</a
+              >
+              <a
+                href="#"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </section>    
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/giacomo-cerino/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/LobinArcolungo">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://makerworld.com/en/@whale_levitator/upload">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/makerworld-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Giacomo Cerino</h4>
+            <p class="main-footer__short-desc">
+              A creative technologist with a passion for DIY projects exploring new technologies and mixing them with custom made hardware and software solutions.
+
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2021. This Portfolio has been made possible by the beautiful work of
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

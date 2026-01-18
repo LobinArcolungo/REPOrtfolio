@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Case Study of proj_name</title>
+    <meta name="description" content="Case study page of proj_name" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/giacomo-cerino.png"
+              alt="Giacomo Cerino Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Giacomo Cerino</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link"> About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link"> Projects </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+        <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">TUI Development for Robotic Platform</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            A Terminal User Interface designed to manage and execute robotic missions in a ROS2 environment. 
+            This project combined software architecture, user experience design, and modern development practices 
+            to create an intuitive control system for ERLEtek's robotic test platform.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/png/TUI-screenshot.png"
+              alt="TUI Interface Screenshot"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                ERLEtek, a robotics startup specializing in concrete 3D printing, required a sophisticated control interface 
+                for their robotic test platform. The challenge was to create a Terminal User Interface (TUI) that would 
+                allow operators to design, request, and execute complex robotic missions in a ROS2 (Robot Operating System 2) environment.
+              </p>
+              <p class="project-details__desc-para">
+                The system needed to be intuitive for non-technical users, 
+                yet being able to be rendered from a headless system into a remote terminal. 
+                It had to provide real-time feedback, handle complex mission parameters, 
+                and seamlessly integrate with the existing ROS2 infrastructure. 
+                Additionally, the project emphasized using modern development 
+                practices and AI-assisted tools to accelerate the development process.
+              </p>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Key Features</h3>
+              <p class="project-details__desc-para">
+                The TUI was designed with several core functionalities:
+              </p>
+              <ul class="project-details__desc-para" style="list-style-type: disc; margin-left: 2rem;">
+                <li><strong>Mission Design Interface:</strong> Intuitive menu-driven system for creating and configuring robotic missions</li>
+                <li><strong>Real-time Status Monitoring:</strong> Live display of robot state, sensor readings, and mission progress</li>
+                <li><strong>Parameter Configuration:</strong> User-friendly forms for inputting complex mission parameters</li>
+                <li><strong>Mission History:</strong> Logging and retrieval of previous missions for reuse and analysis</li>
+                <li><strong>ROS2 Integration:</strong> Seamless communication with ROS2 services and topics</li>
+                <li><strong>Error Handling:</strong> Comprehensive error reporting and recovery mechanisms</li>
+              </ul>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Development Process</h3>
+              <p class="project-details__desc-para">
+                <strong>1. Requirements Analysis & Architecture Design</strong><br/>
+                I began by understanding the workflow of robotic mission execution and identified the key user interactions. 
+                I designed a modular architecture that separated concerns between UI logic, ROS2 communication, and data management, 
+                ensuring maintainability and scalability.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>2. UI/UX Design</strong><br/>
+                Using Python's rich text capabilities, I designed a responsive terminal interface with intuitive navigation, 
+                clear visual hierarchy, and organized menu structures. The design prioritized accessibility and minimized cognitive load for operators.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>3. ROS2 Integration Framework</strong><br/>
+                I created a dedicated module to handle all ROS2 communication, managing service calls, topic subscriptions, 
+                and message handling. This abstraction layer allowed the UI to remain independent of ROS2 implementation details.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>4. AI-Assisted Development</strong><br/>
+                With the help of Claude Code, I significantly accelerated the implementation process. 
+                While I took care of the system architecture and design, AI assisted with code generation, 
+                pattern recognition to modify existing code, and debugging, reducing development time while maintaining code quality and consistency.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>5. Data Management & Persistence</strong><br/>
+                I implemented a robust system for storing mission configurations, execution logs, and historical data. 
+                This allowed operators to quickly recall previous missions and analyze robot performance.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>6. Testing & Validation</strong><br/>
+                Comprehensive testing was performed across different mission types, error scenarios, and ROS2 configurations.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>7. Documentation & Deployment</strong><br/>
+                The entire development environment was containerized using Docker for easy switch between branches 
+                and easier merging. 
+                Complete user documentation and developer guides were created for maintenance and future enhancements.
+              </p>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Technical Architecture</h3>
+              <p class="project-details__desc-para">
+                <strong>Frontend Layer:</strong> A Python-based TUI framework that manages user input and displays, 
+                with responsive design patterns and state management.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Application Layer:</strong> Business logic handling mission workflow, data validation, 
+                and user state management. Designed for extensibility and maintainability.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>ROS2 Integration Layer:</strong> Abstraction module for ROS2 service calls, topic subscriptions, 
+                and message handling. Provides synchronous and asynchronous communication patterns.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Data Layer:</strong> Persistence mechanism using structured file formats for mission storage, 
+                logging, and configuration management.
+              </p>
+            </div>
+
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools & Technologies Used</h3>
+              <div class="skills">
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">ROS2</div>
+                <div class="skills__skill">Docker</div>
+                <div class="skills__skill">Software Design</div>
+                <div class="skills__skill">Software Engineering</div>
+                <div class="skills__skill">AI tools for development</div>
+                <div class="skills__skill">GIT</div>
+              </div>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Key Achievements</h3>
+              <p class="project-details__desc-para">
+                <strong>Reduced Mission Setup Time:</strong> The intuitive TUI reduced and streamlined the mission configuration process from minutes to seconds.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Improved Reliability:</strong> Comprehensive error handling and validation prevented common operational mistakes 
+                and improved overall system reliability.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Faster Development:</strong> By leveraging AI tools, I accelerated development while maintaining high code quality, 
+                Being able to quickly prototype and iterate on modules and technologies rather new to me like Textualize and Ros2 framework
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Scalability:</strong> The modular architecture allows for easy addition of new mission types and features 
+                without requiring major refactoring.
+              </p>
+            </div>
+
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Challenges & Solutions</h3>
+              <p class="project-details__desc-para">
+                <strong>Challenge: ROS2 Asynchronous Communication</strong><br/>
+                ROS2 services are inherently asynchronous, but the TUI required responsive, blocking operations. 
+                I implemented a threading model with proper callback management to provide synchronous-like behavior 
+                while maintaining application responsiveness.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Challenge: ROS2 Integration with nodes that were under development in parallel</strong><br/>
+                I set up mockup nodes to simulate the behavior of the real nodes, 
+                allowing for integration testing and validation of the TUI without waiting for all components to be completed.
+              </p>
+            </div>
+
+            <!-- Live Links
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="#"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Live Link</a
+              >
+              <a
+                href="#"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </section>    
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/giacomo-cerino/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/LobinArcolungo">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://makerworld.com/en/@whale_levitator/upload">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/makerworld-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Giacomo Cerino</h4>
+            <p class="main-footer__short-desc">
+              A creative technologist with a passion for DIY projects exploring new technologies and mixing them with custom made hardware and software solutions.
+
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2021. This Portfolio has been made possible by the beautiful work of
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
