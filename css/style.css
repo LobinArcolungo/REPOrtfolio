@@ -702,3 +702,27 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+
+
+/* Hobby Layouts */
+.hobby-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hobby-grid-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 768px) {
+  .hobby-grid,
+  .hobby-grid-gallery {
+    grid-template-columns: 1fr;
+  }
+}
