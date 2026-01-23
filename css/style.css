@@ -163,6 +163,11 @@ textarea {
     border: 2px solid #12AE88;
     box-shadow: none;
     padding: calc(1.5rem - 2px) calc(5rem - 2px); }
+  .btn--center {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    }
 
 .sec-pad {
   padding: 12rem 0; }
@@ -274,6 +279,38 @@ textarea {
         margin: 0 3px; }
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
+
+
+.hobbies {
+  background: #fafafa; 
+  text-align: center;}
+  .hobbies__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10rem; }
+    @media only screen and (max-width: 56.25em) {
+      .hobbies__content {
+        grid-template-columns: 1fr;
+        grid-gap: 8rem; } }
+    .hobbies__content-title {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 3rem; }
+      @media only screen and (max-width: 37.5em) {
+        .hobbies__content-title {
+          font-size: 2.4rem; } }
+    .hobbies__content-details-para {
+      font-size: 1.8rem;
+      color: grey;
+      max-width: 60rem;
+      line-height: 1.7;
+      margin-bottom: 1rem; }
+      .hobbies__content-details-para--hl {
+        font-weight: 700;
+        margin: 0 3px; }
+      .hobbies__content-details-para:last-child {
+        margin-bottom: 4rem; }
+
 
 .projects__row {
   display: grid;
@@ -719,6 +756,22 @@ textarea {
   margin-top: 1.5rem;
 }
 
+.hobby-showcase-img-cont {
+  flex: 0 0 40%;
+  max-width: 60%;
+}
+
+.hobby-showcase-img {
+  width: 100%;
+  height: auto;
+  max-width: 50rem;
+  max-height: 40rem;
+  object-fit: cover;
+  border: 8px solid #aca9a9;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), inset 0 0 0 1px #e0e0e0;
+}
+
 /* Mobile: Stack vertically */
 @media (max-width: 768px) {
   .hobby-grid,
@@ -726,3 +779,193 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.carousel__container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel__slide {
+  min-width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+}
+.only-pic {
+  grid-template-columns: 1fr !important;
+  justify-items: center !important;
+  align-items: center !important;
+
+}
+
+.only-pic .carousel__image-cont {
+  width: auto;
+  max-width: 90%;
+}
+
+.carousel__image-cont {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  
+}
+
+.carousel__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 60rem;
+  max-height: 50rem;
+  object-fit: cover;
+  border: 8px solid #aca9a9;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), inset 0 0 0 1px #e0e0e0;
+}
+
+.carousel__content {
+  padding: 1.5rem;
+  background-color: rgba(245, 245, 245, 0.5);
+  border-radius: 0.5rem;
+}
+
+.carousel__slide-title {
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.carousel__slide-desc {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  line-height: 1.6;
+  color: #555;
+}
+
+.carousel__slide-desc-list {
+  list-style-type: disc;
+  margin-left: 2rem;
+  padding-left: 1rem;
+
+}
+
+.carousel__slide-desc-list-item {
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 0.8rem;
+  list-style-position: outside;
+  list-style: disc;
+  
+}
+
+/* Navigation Buttons */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+}
+
+.carousel__btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel__btn--prev {
+  left: 1rem;
+}
+
+.carousel__btn--next {
+  right: 1rem;
+}
+
+/* Dots Indicator */
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.carousel__dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel__dot--active {
+  background-color: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .carousel__slide {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .carousel__slide-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .carousel__slide-desc {
+    font-size: clamp(1.6rem, 3.5vw, 2rem);
+  }
+
+  .carousel__btn {
+    font-size: 1.5rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .carousel__btn--prev {
+    left: 0.5rem;
+  }
+
+  .carousel__btn--next {
+    right: 0.5rem;
+  }
+}
+
+/* alternative hobby image frame
+.hobby-showcase-img {
+  width: 100%;
+  height: auto;
+  max-width: 50rem;
+  max-height: 40rem;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 60rem;
+  max-height: 50rem;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+*/
